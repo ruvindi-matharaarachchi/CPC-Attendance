@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./PersonalDetailsForm.css"; // Import the CSS file
 
 const PersonalDetailsForm = () => {
   const [formData, setFormData] = useState({
@@ -28,9 +27,9 @@ const PersonalDetailsForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <div>
       <h2>Enter Personal Details</h2>
-      <form onSubmit={handleSubmit} className="personal-form">
+      <form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
         <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
