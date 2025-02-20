@@ -44,12 +44,26 @@ const PersonalDetailsForm = () => {
 
   return (
     <Container maxWidth="sm">
-      <Paper elevation={3} sx={{ padding: 4, marginTop: 5 }}>
-        <Typography variant="h5" align="center" gutterBottom>
+      <Paper
+        elevation={6}
+        sx={{
+          padding: 4,
+          marginTop: 5,
+          borderRadius: 3,
+          backgroundColor: "#f9f9f9",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Typography
+          variant="h5"
+          align="center"
+          gutterBottom
+          sx={{ fontWeight: "bold", color: "#333" }}
+        >
           Enter Personal Details
         </Typography>
         <form onSubmit={handleSubmit}>
-          <Box display="flex" flexDirection="column" gap={2}>
+          <Box display="flex" flexDirection="column" gap={3}>
             <TextField
               label="Full Name"
               name="name"
@@ -58,6 +72,7 @@ const PersonalDetailsForm = () => {
               required
               value={formData.name}
               onChange={handleChange}
+              sx={{ backgroundColor: "white", borderRadius: 1 }}
             />
             <TextField
               label="Email"
@@ -68,6 +83,7 @@ const PersonalDetailsForm = () => {
               required
               value={formData.email}
               onChange={handleChange}
+              sx={{ backgroundColor: "white", borderRadius: 1 }}
             />
             <TextField
               label="Phone Number"
@@ -77,6 +93,7 @@ const PersonalDetailsForm = () => {
               required
               value={formData.phone}
               onChange={handleChange}
+              sx={{ backgroundColor: "white", borderRadius: 1 }}
             />
             <TextField
               label="Department"
@@ -86,6 +103,7 @@ const PersonalDetailsForm = () => {
               required
               value={formData.department}
               onChange={handleChange}
+              sx={{ backgroundColor: "white", borderRadius: 1 }}
             />
             <TextField
               label="Date of Joining"
@@ -97,12 +115,19 @@ const PersonalDetailsForm = () => {
               InputLabelProps={{ shrink: true }}
               value={formData.dateOfJoining}
               onChange={handleChange}
+              sx={{ backgroundColor: "white", borderRadius: 1 }}
             />
             <Button
               type="submit"
               variant="contained"
-              color="primary"
               size="large"
+              sx={{
+                backgroundColor: "#1976d2",
+                color: "white",
+                fontWeight: "bold",
+                borderRadius: 2,
+                "&:hover": { backgroundColor: "#1565c0" },
+              }}
             >
               Submit
             </Button>
